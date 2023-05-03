@@ -1,0 +1,23 @@
+digraph "com.journaldev:SpringRestExample:war:1.0" { 
+	"com.journaldev:SpringRestExample:war:1.0" -> "com.fasterxml.jackson.core:jackson-databind:jar:2.2.3:compile" ; 
+	"com.journaldev:SpringRestExample:war:1.0" -> "org.springframework:spring-context:jar:4.0.0.RELEASE:compile" ; 
+	"com.journaldev:SpringRestExample:war:1.0" -> "org.springframework:spring-webmvc:jar:4.0.0.RELEASE:compile" ; 
+	"com.journaldev:SpringRestExample:war:1.0" -> "org.aspectj:aspectjrt:jar:1.7.4:compile" ; 
+	"com.journaldev:SpringRestExample:war:1.0" -> "org.slf4j:slf4j-api:jar:1.7.5:compile" ; 
+	"com.journaldev:SpringRestExample:war:1.0" -> "org.slf4j:jcl-over-slf4j:jar:1.7.5:runtime" ; 
+	"com.journaldev:SpringRestExample:war:1.0" -> "org.slf4j:slf4j-log4j12:jar:1.7.5:runtime" ; 
+	"com.journaldev:SpringRestExample:war:1.0" -> "log4j:log4j:jar:1.2.15:runtime" ; 
+	"com.journaldev:SpringRestExample:war:1.0" -> "javax.inject:javax.inject:jar:1:compile" ; 
+	"com.journaldev:SpringRestExample:war:1.0" -> "javax.servlet:servlet-api:jar:2.5:provided" ; 
+	"com.journaldev:SpringRestExample:war:1.0" -> "javax.servlet.jsp:jsp-api:jar:2.1:provided" ; 
+	"com.journaldev:SpringRestExample:war:1.0" -> "javax.servlet:jstl:jar:1.2:compile" ; 
+	"com.journaldev:SpringRestExample:war:1.0" -> "junit:junit:jar:4.7:test" ; 
+	"com.fasterxml.jackson.core:jackson-databind:jar:2.2.3:compile" -> "com.fasterxml.jackson.core:jackson-annotations:jar:2.2.3:compile" ; 
+	"com.fasterxml.jackson.core:jackson-databind:jar:2.2.3:compile" -> "com.fasterxml.jackson.core:jackson-core:jar:2.2.3:compile" ; 
+	"org.springframework:spring-context:jar:4.0.0.RELEASE:compile" -> "org.springframework:spring-aop:jar:4.0.0.RELEASE:compile" ; 
+	"org.springframework:spring-context:jar:4.0.0.RELEASE:compile" -> "org.springframework:spring-beans:jar:4.0.0.RELEASE:compile" ; 
+	"org.springframework:spring-context:jar:4.0.0.RELEASE:compile" -> "org.springframework:spring-core:jar:4.0.0.RELEASE:compile" ; 
+	"org.springframework:spring-context:jar:4.0.0.RELEASE:compile" -> "org.springframework:spring-expression:jar:4.0.0.RELEASE:compile" ; 
+	"org.springframework:spring-aop:jar:4.0.0.RELEASE:compile" -> "aopalliance:aopalliance:jar:1.0:compile" ; 
+	"org.springframework:spring-webmvc:jar:4.0.0.RELEASE:compile" -> "org.springframework:spring-web:jar:4.0.0.RELEASE:compile" ; 
+ } 
