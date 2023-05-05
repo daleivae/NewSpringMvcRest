@@ -61,34 +61,34 @@ pipeline {
      }
     post {
         always {
-                slackSend "Regardless of the completion status of the Pipeline or stage run - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+                slackSend message:"Regardless of the completion status of the Pipeline or stage run - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
         }            
         changed {
-                slackSend "the current Pipeline run has a different completion status from its previous run - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+                slackSend message:"the current Pipeline run has a different completion status from its previous run - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
         }            
         fixed {
-                slackSend "The current Pipeline run is successful and the previous run failed or was unstable - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+                slackSend message:"The current Pipeline run is successful and the previous run failed or was unstable - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
         }            
         regression {
-                slackSend "The current Pipeline or status is failure, unstable, or aborted and the previous run was successful - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+                slackSend message:"The current Pipeline or status is failure, unstable, or aborted and the previous run was successful - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
         }            
         aborted {
-                slackSend "The current Pipeline run has an <aborted> status was successful - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+                slackSend message:"The current Pipeline run has an <aborted> status was successful - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
         }            
         failure {
-                slackSend failOnError:true "The current Pipeline or stage run has a <failed> status  - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+                slackSend failOnError:true message:"The current Pipeline or stage run has a <failed> status  - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
         }
         success {
-                slackSend "The current Pipeline or stage run has a <success> status - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+                slackSend message:"The current Pipeline or stage run has a <success> status - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
         }            
         unstable {
-                slackSend "The current Pipeline run has an <unstable> status - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+                slackSend message:"The current Pipeline run has an <unstable> status - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
         }            
         unsuccessful {
-                slackSend "The current Pipeline or stage run has not a <success> status - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+                slackSend message:"The current Pipeline or stage run has not a <success> status - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
         }            
         cleanup {
-                slackSend "Every other post condition has been evaluated - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+                slackSend message:"Every other post condition has been evaluated - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
         }            
     }
 }
