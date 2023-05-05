@@ -76,7 +76,7 @@ pipeline {
                 slackSend message:"The current Pipeline run has an <aborted> status was successful - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
         }            
         failure {
-                slackSend failOnError:true message:"The current Pipeline or stage run has a <failed> status  - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+                slackSend message:"The current Pipeline or stage run has a <failed> status  - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
         }
         success {
                 slackSend message:"The current Pipeline or stage run has a <success> status - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
