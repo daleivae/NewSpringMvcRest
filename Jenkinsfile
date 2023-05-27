@@ -11,7 +11,7 @@ pipeline {
                 echo "Esta es el inicio"
             }
         }
-        stage('Build') {
+        stage('Build')  {
             steps {
                 sh 'mvn -B package'
             
