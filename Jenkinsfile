@@ -21,8 +21,8 @@ pipeline {
         stage('Test') {
             steps {
                  sh "mvn clean verify sonar:sonar -Dsonar.projectKey=ScannerMavenJenkins \
-                                                  -Dsonar.host.url=http://172.28.224.1:8082 \
-                                                  -Dsonar.login=sqp_98788e87facf9eeb7295ce9a2ebc2c54bf292101" 
+                                                  -Dsonar.host.url=http://172.28.224.1:9000 \
+                                                  -Dsonar.login=sqp_234dbe2f0e9c56f0e95bbd08e7f8c95aa538cf92" 
             
             }
         } 
